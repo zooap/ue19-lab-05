@@ -1,6 +1,5 @@
 import requests
 
-print('Hello')
 # URL de l'API
 url = "https://official-joke-api.appspot.com/random_joke"
 
