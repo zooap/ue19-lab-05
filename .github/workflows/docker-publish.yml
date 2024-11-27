@@ -45,11 +45,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Build an image from Dockerfile
-        run: docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
+        run: docker build -t ghcr.io/zooap/ue19-lab-05:main .
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.28.0
         with:
-          image-ref: 'docker.io/my-organization/my-app:${{ github.sha }}'
+          image-ref: 'ghcr.io/zooap/ue19-lab-05:main'
           format: 'table'
           exit-code: '1'
           ignore-unfixed: true
